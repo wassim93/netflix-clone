@@ -5,7 +5,11 @@
   display: flex;
   padding: 20px;
   justify-content: space-between;
+  z-index: 1;
   height: 30px;
+  /*Animations*/
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
 }
 .nav_logo {
   width: 130px;
@@ -18,7 +22,7 @@
 }
 
 .nav_avatar {
-  width: 50px;
+  width: 35px;
   object-fit: contain;
   position: fixed;
   right: 20px;

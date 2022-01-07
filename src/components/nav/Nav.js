@@ -18,7 +18,7 @@ const Nav = () => {
     };
   }, []);
   return (
-    <div className={`nav ${show && "scroll"}`}>
+    <div className={show ? "nav nav_black" : "nav"}>
       <img className="nav_logo" src={Logo} alt="Netflix Logo" />
       <img className="nav_avatar" src={Avatar} alt="Netflix Avatar" />
     </div>
