@@ -13,8 +13,7 @@ const Banner = () => {
   useEffect(() => {
     async function fetchData() {
       const res = await axios.get(requests.fetchNetflixOriginals);
-      console.log("res", res);
-
+      // console.log("res", res);
       const randomMovie =
         res.data.results[
           Math.floor(Math.random() * res.data.results.length - 1)
@@ -45,6 +44,8 @@ const Banner = () => {
 
         <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
       </div>
+
+      <div className="banner_fadebottom"></div>
     </header>
   );
 };
