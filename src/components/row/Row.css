@@ -1,4 +1,5 @@
 .row {
+  margin-left: 20px;
 }
 
 .posters {
@@ -17,6 +18,13 @@
   max-height: 100px;
   margin-right: 10px;
   transition: transform 450ms;
+}
+.row_large {
+  max-height: 250px;
+}
+
+.row_large:hover {
+  transform: scale(1.09);
 }
 
 .row_poster:hover {
