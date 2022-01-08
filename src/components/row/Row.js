@@ -50,7 +50,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
   return (
     <div className="row">
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <div className="posters">
         {movies.map((m) => (
           <LazyLoadImage
