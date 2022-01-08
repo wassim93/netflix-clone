@@ -1,6 +1,21 @@
+# NETFLIX CLONE APP
+
+- React Js
+- Hooks
+- Lazy load image
+- movie trailer
+- youtube video
+- axios
+- TMDB API
+
 Live Demo APP
 
 - https://netflix-clone-686eb.web.app/
+
+* Screenshot
+  Home Page
+
+<img src="https://github.com/wassim93/netflix-clone/blob/master/Screenshot/home.PNG" width=50% height=50%>
 
 # Getting Started with Create React App
 
