@@ -7,21 +7,19 @@
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding: 20px;
+  padding: 30px;
 }
 .posters::-webkit-scrollbar {
   display: none;
 }
 
 .row_poster {
-  width: 100%;
   object-fit: contain;
-  max-height: 100px;
-  margin-right: 10px;
-  transition: transform 450ms;
+  max-height: 120px;
+  margin-right: 20px;
 }
 .row_large {
-  max-height: 250px;
+  max-height: 320px;
 }
 
 .row_large:hover {
@@ -30,4 +28,8 @@
 
 .row_poster:hover {
   transform: scale(1.08);
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded > img {
+  transition: transform 450ms;
 }

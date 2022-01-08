@@ -1,8 +1,10 @@
 import axios from "../../network/axios";
 import React, { useEffect, useState } from "react";
-import "../row/Row.css";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import "../row/Row.css";
 
 const imageUrl = "https://image.tmdb.org/t/p/original";
 
@@ -38,6 +40,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
           // result will be full url
           // https://www.youtube.com/watch?v=vfBrUvPgWTE
           // so we need to extract the video id only
+          console.log(url);
           const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(urlParams.get("v"));
         })
@@ -50,7 +53,8 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
       <h1>{title}</h1>
       <div className="posters">
         {movies.map((m) => (
-          <img
+          <LazyLoadImage
+            effect="blur"
             onClick={() => handleClick(m)}
             className={isLargeRow ? "row_poster row_large" : "row_poster"}
             key={m.id}
